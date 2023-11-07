@@ -3,7 +3,6 @@
 Alunos:
 
 * Pedro Henrique de Marins da Silva - RM348617
-* Rogério Sampaio Stubs -  RM349115
 * Gustavo Jorge Franco Teles dos Santos - RM349553
 
 ## O PROBLEMA
@@ -15,7 +14,26 @@ Sem um sistema de controle de pedidos, pode haver confusão entre os atendentes 
 Em resumo, um sistema de controle de pedidos é essencial para garantir que a lanchonete possa atender os clientes de maneira eficiente, gerenciando seus pedidos e estoques de forma adequada. Sem ele, expandir a lanchonete pode acabar não dando certo, resultando em clientes insatisfeitos e impactando os negócios de forma negativa.
 
 Para solucionar o problema, a lanchonete irá investir em um sistema de autoatendimento de fast food, que é composto por uma série de dispositivos e interfaces que permitem aos clientes selecionar e fazer pedidos sem precisar interagir com um atendente, com as seguintes
+
+## ENTREGA FASE 3
+- Novos repositórios:
+  - [1 repositório para Lambda](https://github.com/fiap-lanchonete/auth-lambda)
+  - [1 repositório para Infra Kubernetes](https://github.com/fiap-lanchonete/projeto-lanchonete-infra)
+  - [1 repositório para infra do banco de dados](https://github.com/fiap-lanchonete/infra-db)
+  - [1 repositório para aplicação que é executada no Kubernetes](https://github.com/fiap-lanchonete/projeto-lanchonete-api)
+
 funcionalidades:
+
+## Banco de dados
+![Schema](https://i.imgur.com/SH3RgVa.png)
+
+Para esta aplicação, optamos por utilizar o Amazon RDS juntamente com o PostgreSQL. O Amazon RDS é um serviço de banco de dados relacional que facilita a configuração, a operação e a escalabilidade de bancos de dados na AWS. Ele fornece um gerenciamento de banco de dados relacional econômico e redimensionável. Já o PostgreSQL é um sistema de gerenciamento de banco de dados relacional (RDBMS) poderoso, de código aberto e orientado a objetos. Ele oferece recursos avançados, como suporte completo a chaves estrangeiras, junções, visualizações, triggers e procedimentos armazenados. A combinação dessas duas tecnologias nos permite gerenciar eficientemente nossos dados e garantir um desempenho robusto para nossa aplicação.
+
+## Autenticação
+![Authentication Diagram](https://i.imgur.com/jhxn4db.jpg)
+
+O diagrama acima ilustra o fluxo de autenticação do nosso sistema. O usuário inicia o processo fornecendo o CPF, ou de forma anônima. Em seguida, o sistema valida essas credenciais e, se estiverem corretas, gera um token de acesso. Este token é então usado para autenticar todas as solicitações subsequentes do usuário. Isso garante que apenas usuários autenticados possam acessar recursos protegidos (criação de pedido).
+
 
 ## ENTREGA FASE 2
 - Medidas de Segurança
